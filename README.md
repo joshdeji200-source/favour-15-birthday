@@ -8,12 +8,16 @@
 body{
 margin:0;
 overflow:hidden;
-font-family:Arial, sans-serif;
+font-family:Impact, Arial Black, sans-serif;
 background: linear-gradient(135deg,#0a0f3c,#2b0f54,#3d0f4f,#140a2e,#1a0f3d);
 background-size:400% 400%;
-animation: marble 18s ease infinite;
+animation: marble 20s ease infinite;
 color:white;
 text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
 transition:background 0.5s, opacity 0.8s;
 }
 
@@ -31,29 +35,29 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:20px;
+text-align:center;
 }
 
 h1,h2,p{
 font-weight:900;
-margin:15px 0;
+margin:20px 0;
+text-align:center;
 }
 
-h1{font-size:60px;}
-h2{font-size:50px;}
-p{font-size:30px;max-width:80%;}
+h1{font-size:75px;}
+h2{font-size:60px;}
+p{font-size:40px; max-width:90%;}
 
 button{
-padding:22px 50px;
-font-size:30px;
+padding:25px 60px;
+font-size:35px;
 font-weight:900;
 border:none;
-border-radius:15px;
-margin:20px;
+border-radius:18px;
+margin:25px;
 cursor:pointer;
 background:#111;
 color:white;
-transition:transform 0.2s;
 }
 
 button:hover{
@@ -62,23 +66,23 @@ transform:scale(1.1);
 
 /* GOLD FLASH */
 .flashGold{
-animation: goldFlash 0.6s;
+animation: goldFlash 0.7s;
 }
 
 @keyframes goldFlash{
 0%{background:#000;}
-50%{background:#6b5b00;}
+50%{background:#5f5200;}
 100%{background: linear-gradient(135deg,#0a0f3c,#2b0f54,#3d0f4f,#140a2e,#1a0f3d);}
 }
 
 /* RED FLASH */
 .flashRed{
-animation: redFlash 0.6s;
+animation: redFlash 0.7s;
 }
 
 @keyframes redFlash{
 0%{background:#000;}
-50%{background:#5c0000;}
+50%{background:#4d0000;}
 100%{background: linear-gradient(135deg,#0a0f3c,#2b0f54,#3d0f4f,#140a2e,#1a0f3d);}
 }
 
@@ -88,23 +92,23 @@ animation: vibrate 0.3s linear infinite;
 }
 
 @keyframes vibrate{
-0%{transform:translate(3px,3px);}
-25%{transform:translate(-3px,-3px);}
-50%{transform:translate(3px,-3px);}
-75%{transform:translate(-3px,3px);}
-100%{transform:translate(3px,3px);}
+0%{transform:translate(4px,4px);}
+25%{transform:translate(-4px,-4px);}
+50%{transform:translate(4px,-4px);}
+75%{transform:translate(-4px,4px);}
+100%{transform:translate(4px,4px);}
 }
 
 /* Floating objects */
 .float{
 position:absolute;
-font-size:55px;
+font-size:70px;
 animation: fall linear infinite;
 }
 
 @keyframes fall{
-0%{transform:translateY(-100px) rotate(0deg);}
-100%{transform:translateY(110vh) rotate(360deg);}
+0%{transform:translateY(-120px) rotate(0deg);}
+100%{transform:translateY(120vh) rotate(360deg);}
 }
 </style>
 </head>
@@ -131,9 +135,9 @@ animation: fall linear infinite;
 </div>
 
 <div id="page3" class="page" style="display:none;">
-<h1>Happy birthday, my nigga</h1>
-<p>May your life be filled with peace, success and laughter.</p>
-<p>May all you dreams come through for and may you always get the best of the world.</p>
+<h1>HAPPY BIRTHDAY, MY NIGGA</h1>
+<p>MAY YOUR LIFE BE FILLED WITH PEACE, SUCCESS AND LAUGHTER.</p>
+<p>MAY ALL YOU DREAMS COME THROUGH FOR AND MAY YOU ALWAYS GET THE BEST OF THE WORLD.</p>
 <h1>LONG LIVE THE QUEEN 👑</h1>
 </div>
 
@@ -144,7 +148,7 @@ document.getElementById("page1").style.display="none";
 document.getElementById("page2").style.display="flex";
 
 document.body.classList.add("flashGold");
-setTimeout(()=>document.body.classList.remove("flashGold"),600);
+setTimeout(()=>document.body.classList.remove("flashGold"),700);
 
 createChaos();
 }
@@ -154,7 +158,7 @@ document.getElementById("page2").style.display="none";
 document.getElementById("page3").style.display="flex";
 
 document.body.classList.add("flashGold");
-setTimeout(()=>document.body.classList.remove("flashGold"),600);
+setTimeout(()=>document.body.classList.remove("flashGold"),700);
 }
 
 function chaos(){
@@ -166,13 +170,13 @@ document.body.classList.add("vibrate");
 
 setTimeout(()=>{
 document.body.style.opacity="0";
-},900);
+},1000);
 
-},600);
+},700);
 }
 
 function createChaos(){
-for(let i=0;i<70;i++){
+for(let i=0;i<80;i++){
 
 let item=document.createElement("div");
 item.className="float";
